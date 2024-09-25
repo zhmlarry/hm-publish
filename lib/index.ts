@@ -4,13 +4,13 @@
  * @Autor: zenghaoming
  * @Date: 2023-04-21 14:10:04
  * @LastEditors: zenghaoming
- * @LastEditTime: 2024-09-25 13:16:51
+ * @LastEditTime: 2024-09-25 19:25:59
  */
 import { createId } from './util/index';
 
 import type { fnType, _EventObjType, _EventInterface, ConstructorProps, SubscribeReturn } from './types';
 
-export default class TwPublish<T> {
+export default class HmPublish<T> {
   private _event: _EventInterface<T>;
   //
   constructor(props: ConstructorProps<T[keyof T]>) {
