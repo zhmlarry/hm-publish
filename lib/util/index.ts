@@ -4,7 +4,7 @@
  * @Autor: zenghaoming
  * @Date: 2024-09-25 12:57:47
  * @LastEditors: zenghaoming
- * @LastEditTime: 2024-09-25 12:57:59
+ * @LastEditTime: 2024-09-25 13:16:54
  */
 // 洗牌算法，随机打乱数组
 export const shuffle = (arr: Array<any>) => {
@@ -22,7 +22,7 @@ export const randomStr: any = (len = 6) =>
   Math.random()
     .toString(36)
     .slice(2, len + 2)
-    .padEnd(len, Math.floor(Math.random() * 10) + "");
+    .padEnd(len, Math.floor(Math.random() * 10) + '');
 
 // 生成ID
 export const createId = (group = 3, len = 6) => {
@@ -34,5 +34,5 @@ export const createId = (group = 3, len = 6) => {
   // 重新打乱数组顺序
   arr = shuffle(arr);
   //
-  return arr.join("-");
+  return arr.join('-');
 };

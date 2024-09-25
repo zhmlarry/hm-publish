@@ -4,17 +4,11 @@
  * @Autor: zenghaoming
  * @Date: 2023-04-21 14:10:04
  * @LastEditors: zenghaoming
- * @LastEditTime: 2024-09-25 12:57:23
+ * @LastEditTime: 2024-09-25 13:16:51
  */
-import { createId } from "./util/index";
+import { createId } from './util/index';
 
-import type {
-  fnType,
-  _EventObjType,
-  _EventInterface,
-  ConstructorProps,
-  SubscribeReturn,
-} from "./types";
+import type { fnType, _EventObjType, _EventInterface, ConstructorProps, SubscribeReturn } from './types';
 
 export default class TwPublish<T> {
   private _event: _EventInterface<T>;
@@ -29,11 +23,11 @@ export default class TwPublish<T> {
     config?: { once?: boolean; des?: string }
   ): SubscribeReturn {
     const _name = name as string;
-    const { once = false, des = "" } = config || {};
+    const { once = false, des = '' } = config || {};
     //
     if (!this._event[_name]) {
       // console.error(`${_name} 事件订阅失败，因为它不在事件 [` + Object.keys(this._event).join(',') + '] 范围内');
-      return { id: "", success: false };
+      return { id: '', success: false };
     }
     if (!this._event[_name]) {
       this._event[_name] = [];
